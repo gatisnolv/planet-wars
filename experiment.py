@@ -36,10 +36,16 @@ class Bot:
         if random.random() < self.__nomove:
 
             # IMPLEMENT: Make no move
-            pass
+            #IMPLEMENTED
+            return None
 
         #IMPLEMENT: Make a random move (but not None).
-        pass
+        #IMPLEMENTED
+        moves = state.moves()
+        moves.remove(None)
+        if(len(moves)==0):
+            return None
+        return random.choice(moves)
 
 
 def empty(n):
